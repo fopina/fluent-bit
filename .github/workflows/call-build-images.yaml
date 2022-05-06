@@ -128,7 +128,7 @@ jobs:
 
       - name: Extract metadata from Github
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ${{ inputs.registry }}/${{ inputs.image }}
           tags: |
@@ -198,7 +198,7 @@ jobs:
         shell: bash
 
       - id: debug-meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ${{ inputs.registry }}/${{ inputs.image }}
           tags: |
@@ -252,7 +252,7 @@ jobs:
 
       - name: Extract metadata from Github
         id: meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ${{ inputs.registry }}/${{ inputs.image }}
           tags: |
@@ -275,7 +275,7 @@ jobs:
             FLB_NIGHTLY_BUILD=${{ inputs.unstable }}
 
       - id: debug-meta
-        uses: docker/metadata-action@v3
+        uses: docker/metadata-action@v4
         with:
           images: ${{ inputs.registry }}/${{ inputs.image }}
           tags: |
